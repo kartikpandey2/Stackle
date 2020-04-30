@@ -6,7 +6,9 @@
   "scripts": {
     "test": "mocha --timeout 20000",
     "start": "nodemon bin/www",
-    "serve": "node bin/www"
+    "serve": "node bin/www",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -41,7 +43,8 @@
     "nodemon": "^1.17.5",
     "passport": "^0.4.0",
     "passport-github": "^1.1.0",
-    "passport-http-bearer": "^1.0.1"
+    "passport-http-bearer": "^1.0.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -50,5 +53,6 @@
   },
   "engines": {
     "node": "6.9.5"
-  }
+  },
+  "snyk": true
 }
